@@ -1,3 +1,4 @@
+(function () {
 'use strict';
 
 angular.module('dm.style', [])
@@ -12,3 +13,5 @@ angular.module('dm.style', [])
       }
     };
   });
+
+})();
