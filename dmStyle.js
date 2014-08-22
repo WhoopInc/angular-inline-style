@@ -8,6 +8,7 @@ angular.module('dm.style', [])
       link: function postLink(scope, element) {
         var content = element.html();
         if (content) {
+          content = content.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
           var template = $compile('<style ng-bind-template="' + content + '"></style>');
           element.replaceWith(template(scope));
         }
