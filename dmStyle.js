@@ -6,8 +6,9 @@ angular.module('dm.style', [])
     return {
       restrict: 'E',
       link: function postLink(scope, element) {
-        if (element.html()) {
-          var template = $compile('<style ng-bind-template="' + element.html() + '"></style>');
+        var content = element.html();
+        if (content) {
+          var template = $compile('<style ng-bind-template="' + content + '"></style>');
           element.replaceWith(template(scope));
         }
       }
